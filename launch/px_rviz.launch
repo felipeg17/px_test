@@ -15,11 +15,11 @@
   <node unless="$(arg gui)" name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   
   <!-- Carga controladores -->
-  <rosparam file="$(find px_test)/config/joints.yaml" command="load" ns="px_joint_state_controller"/>
+  <!-- <rosparam file="$(find px_test)/config/joints.yaml" command="load" ns="px_joint_state_controller"/>
   <rosparam file="$(find px_test)/config/pos_control.yaml" command="load" ns="px_pos_controller"/>
   <node pkg="controller_manager" type="spawner" name="px_controllers" respawn="false"
         args="px_joint_state_controller
-              px_pos_controller" />
+              px_joint1_controller"/> -->
 
   <!-- Carga Rvix con config -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
